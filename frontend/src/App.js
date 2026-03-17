@@ -8,14 +8,12 @@ import Search from './components/Search';
 import MyPortfolio from './components/MyPortfolio';
 import './App.css';
 
-// API base URL - Flask backend
 const API_URL = 'http://localhost:5001/api';
 
 function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Check if user is logged in (from localStorage)
     const savedUser = localStorage.getItem('user');
     if (savedUser) {
       setUser(JSON.parse(savedUser));
